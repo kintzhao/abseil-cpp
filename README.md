@@ -1,9 +1,11 @@
-===> build absl
+===> build and install absl
  
  mkdir -p build  && cd build 
 
-cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
-make  
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local 
+
+make  -j4 
+
 sudo make install  >> ../install.info
 
 
