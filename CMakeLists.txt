@@ -20,6 +20,9 @@
 # (https://fedoraproject.org/wiki/EPEL#Extra_Packages_for_Enterprise_Linux_.28EPEL.29)
 # and then issuing `yum install cmake3` on the command line.
 cmake_minimum_required(VERSION 3.5)
+add_compile_options(-std=c++11)
+set(CMAKE_CXX_FLAGS "-fPIC")   #c++
+set(CMAKE_C_FLAGS "-fPIC")     #c
 
 # Compiler id for Apple Clang is now AppleClang.
 cmake_policy(SET CMP0025 NEW)

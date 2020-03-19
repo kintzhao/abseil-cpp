@@ -1,3 +1,13 @@
+===> build absl
+ 
+ mkdir -p build  && cd build 
+
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
+make  
+sudo make install  >> ../install.info
+
+
+
 # Abseil - C++ Common Libraries
 
 The repository contains the Abseil C++ library code. Abseil is an open-source
