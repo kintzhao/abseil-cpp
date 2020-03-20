@@ -1,14 +1,24 @@
 ===> build and install absl
- 
+
  mkdir -p build  && cd build 
 
-cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local 
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local  -DBUILD_SHARED_LIBS=ON
 
 make  -j4 
 
 sudo make install  >> ../install.info
 
 
+
+--------------------------
+
+**Error**: relocation R_X86_64_32S against `.data' can not be used when making a shared object; recompile with -fPIC
+
+(1) edit **CMakeCache.txt**
+(2) Change:
+**CMAKE_CXX_FLAGS:STRING=-fPIC**
+(3) re-compile and install.
+--------------------------------------
 
 # Abseil - C++ Common Libraries
 
